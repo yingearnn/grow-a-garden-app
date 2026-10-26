@@ -1,0 +1,348 @@
+/* Shop CSS - Pixel Art Theme */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #87CEEB;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 36px),
+    repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 36px);
+  min-height: 100vh;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+  background: #2C3E50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 0 #1a252f;
+  border-bottom: 4px solid #34495E;
+}
+
+.logo a {
+  color: #2ECC71;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 #27AE60;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #27AE60;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: bold;
+  color: #ECF0F1;
+  text-shadow: 1px 1px 0 #1a252f;
+}
+
+.btn-logout {
+  background: #E74C3C;
+  color: white;
+  border: 3px solid #C0392B;
+  padding: 0.6rem 1.5rem;
+  box-shadow: 0 4px 0 #A93226;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-logout:hover {
+  background: #C0392B;
+  top: 2px;
+  box-shadow: 0 2px 0 #A93226;
+}
+
+.btn-logout:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Shop Container */
+.shop-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.shop-header {
+  background: #F4E4C1;
+  border: 4px solid #8B6F47;
+  box-shadow: 0 8px 0 #6B5736;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.shop-header h1 {
+  color: #9B59B6;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 0 #8E44AD;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+#refresh-timer {
+  color: #5D4E37;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+#timer-value {
+  color: #E67E22;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 0 #D35400;
+  font-weight: bold;
+}
+
+
+
+
+
+/* Shop Section */
+.shop-section {
+  background: #ECF0F1;
+  border: 4px solid #BDC3C7;
+  box-shadow: 0 6px 0 #95A5A6;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.shop-section h2 {
+  color: #2C3E50;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+  border-bottom: 4px solid #2C3E50;
+  padding-bottom: 0.5rem;
+}
+
+.tools-info {
+  color: #E67E22;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Shop Grid */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.shop-item {
+  background: white;
+  border: 4px solid #34495E;
+  box-shadow: 0 5px 0 #2C3E50;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.shop-item:hover {
+  top: 2px;
+  box-shadow: 0 3px 0 #2C3E50;
+}
+
+.shop-item.out-of-stock {
+  background: #D5DBDB;
+  border-color: #95A5A6;
+  opacity: 0.6;
+}
+
+.shop-item h3 {
+  color: #2C3E50;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+.shop-item p {
+  color: #34495E;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.rarity {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 3px solid;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.rarity.common {
+  background: #95A5A6;
+  border-color: #7F8C8D;
+  color: white;
+  box-shadow: 0 3px 0 #5D6D7E;
+}
+
+.rarity.uncommon {
+  background: #2ECC71;
+  border-color: #27AE60;
+  color: white;
+  box-shadow: 0 3px 0 #1e8449;
+}
+
+.rarity.rare {
+  background: #3498DB;
+  border-color: #2980B9;
+  color: white;
+  box-shadow: 0 3px 0 #1F618D;
+}
+
+.rarity.epic {
+  background: #9B59B6;
+  border-color: #8E44AD;
+  color: white;
+  box-shadow: 0 3px 0 #7D3C98;
+}
+
+.rarity.legendary {
+  background: #F39C12;
+  border-color: #E67E22;
+  color: white;
+  box-shadow: 0 3px 0 #D35400;
+}
+
+.price {
+  color: #F39C12 !important;
+  font-size: 1.2rem !important;
+  margin: 1rem 0 !important;
+  text-shadow: 1px 1px 0 #E67E22;
+}
+
+.stock {
+  color: #7F8C8D !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.btn-buy {
+  background: #2ECC71;
+  color: white;
+  border: 3px solid #27AE60;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 4px 0 #1e8449;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 1rem;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-buy:hover:not(:disabled) {
+  background: #27AE60;
+  top: 2px;
+  box-shadow: 0 2px 0 #1e8449;
+}
+
+.btn-buy:active:not(:disabled) {
+  box-shadow: none;
+  top: 4px;
+}
+
+.btn-buy:disabled {
+  background: #95A5A6;
+  border-color: #7F8C8D;
+  box-shadow: 0 4px 0 #5D6D7E;
+  cursor: not-allowed;
+}
+
+/* Back Link */
+.back-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-secondary {
+  background: #34495E;
+  color: white;
+  border: 3px solid #2C3E50;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 0 #1a252f;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-secondary:hover {
+  background: #2C3E50;
+  top: 2px;
+  box-shadow: 0 2px 0 #1a252f;
+}
+
+.btn-secondary:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #5D4E37;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shop-container {
+    padding: 1rem;
+  }
+  
+  .shop-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-header {
+    padding: 1rem;
+  }
+  
+  .shop-section {
+    padding: 1rem;
+  }
+}

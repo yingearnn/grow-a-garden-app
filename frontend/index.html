@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garden Game – Register</title>
+  <link rel="stylesheet" href="css/auth.css">
+   <link rel="stylesheet" href="css/notification.css">
+</head>
+<body>
+  <div id="notification-container"></div>
+
+  <div class="auth-container">
+    <h1>🌼 Create Account</h1>
+    <p>Start your garden journey</p>
+
+    <!-- Added form wrapper -->
+    <form id="registerForm">
+      <input type="text" id="register-username" placeholder="Username">
+      <input type="text" id="register-email" placeholder="Email">
+      <input type="password" id="register-password" placeholder="Password">
+
+      <button type="submit" id="register-btn">Register</button>
+    </form>
+
+    <div class="auth-link">
+      Already have an account? <a href="login.html">Login</a>
+    </div>
+  </div>
+
+  <!-- Link external JS -->
+    <script type="module" src="js/notifications.js"></script>
+  <script src="js/queryCmds.js"></script>
+  <script src="demo/mock-api.js"></script>
+  <script src="js/getCurrentURL.js"></script>
+  <script type="module" src="js/register.js"></script>
+
+</html>

@@ -1,0 +1,65 @@
+<!-- inventory.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garden Game – Inventory</title>
+  <link rel="stylesheet" href="css/inventory.css">
+   <link rel="stylesheet" href="css/notification.css">
+</head>
+<body>
+  <div id="notification-container"></div>
+  <header class="top-bar">
+    <div class="logo">
+      <a href="homepage.html">🌱 Pixel Grove</a>
+    </div>
+    <div class="stats">
+      <span id="points-display">Points: 0</span>
+      <span id="networth-display">Net Worth: $0</span>
+    </div>
+    <button id="logout-btn" class="btn-logout">Logout</button>
+  </header>
+
+  <main class="inventory-container">
+    <div class="inventory-header">
+      <h1>📦 My Inventory</h1>
+      <p>Select a plant to plant it in your garden</p>
+    </div>
+
+    <div id="inventory-grid" class="inventory-grid">
+      <div class="loading">Loading inventory...</div>
+    </div>
+
+    <div class="empty-state" id="empty-inventory" style="display: none;">
+      <p>Your inventory is empty!</p>
+      <a href="shop.html" class="btn-primary">Visit Shop</a>
+    </div>
+
+    <div class="back-link">
+      <a href="homepage.html" class="btn-secondary">← Back to Dashboard</a>
+    </div>
+  </main>
+
+  <!-- Plant Modal -->
+  <div id="plant-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Plant This Plant</h2>
+      <p id="modal-plant-name"></p>
+      <form id="plant-form">
+        <label for="plot-number">Enter plot number (1-20):</label>
+       <input type="text" id="plot-number" placeholder="Plot number (1-20)">
+        <button type="submit" class="btn-primary">Plant Now</button>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="js/notifications.js"></script>
+  <script src="js/queryCmds.js"></script>
+  <script src="demo/mock-api.js"></script>
+  <script src="js/getCurrentURL.js"></script>
+  <script type="module" src="js/inventory.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

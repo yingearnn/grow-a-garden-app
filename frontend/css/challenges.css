@@ -1,0 +1,680 @@
+/* Challenges CSS - Pixel Art Theme */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #87CEEB;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 36px),
+    repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 36px);
+  min-height: 100vh;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+  background: #2C3E50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 0 #1a252f;
+  border-bottom: 4px solid #34495E;
+}
+
+.logo a {
+  color: #2ECC71;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 #27AE60;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #27AE60;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: bold;
+  color: #ECF0F1;
+  text-shadow: 1px 1px 0 #1a252f;
+}
+
+.btn-logout {
+  background: #E74C3C;
+  color: white;
+  border: 3px solid #C0392B;
+  padding: 0.6rem 1.5rem;
+  box-shadow: 0 4px 0 #A93226;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-logout:hover {
+  background: #C0392B;
+  top: 2px;
+  box-shadow: 0 2px 0 #A93226;
+}
+
+.btn-logout:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Challenges Container */
+.challenges-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.challenges-header {
+  background: #F4E4C1;
+  border: 4px solid #8B6F47;
+  box-shadow: 0 8px 0 #6B5736;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.challenges-header h1 {
+  color: #E67E22;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 0 #D35400;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.challenges-header p {
+  color: #5D4E37;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.cooldown-info {
+  color: #E74C3C !important;
+  font-size: 1rem !important;
+  margin-top: 1rem !important;
+}
+
+/* Challenge Tabs */
+.challenge-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  flex: 1;
+  min-width: 150px;
+  background: #ECF0F1;
+  color: #2C3E50;
+  border: 3px solid #BDC3C7;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 0 #95A5A6;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.tab-btn:hover {
+  background: #D5DBDB;
+  top: 2px;
+  box-shadow: 0 2px 0 #95A5A6;
+}
+
+.tab-btn.active {
+  background: #3498DB;
+  color: white;
+  border-color: #2980B9;
+  box-shadow: 0 4px 0 #1F618D;
+}
+
+.tab-btn.active:hover {
+  background: #2980B9;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Challenges List */
+.challenges-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.challenge-card {
+  background: #ECF0F1;
+  border: 4px solid #BDC3C7;
+  box-shadow: 0 6px 0 #95A5A6;
+  padding: 1.5rem;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.challenge-card:hover {
+  top: 3px;
+  box-shadow: 0 3px 0 #95A5A6;
+}
+
+.challenge-card h3 {
+  color: #2C3E50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+.challenge-points {
+  background: #F39C12;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 3px solid #E67E22;
+  box-shadow: 0 3px 0 #D35400;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 1px 1px 0 #D35400;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.btn-complete {
+  background: #3498DB;
+  color: white;
+  border: 3px solid #2980B9;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 4px 0 #1F618D;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-complete:hover:not(:disabled) {
+  background: #2980B9;
+  top: 2px;
+  box-shadow: 0 2px 0 #1F618D;
+}
+
+.btn-complete:active:not(:disabled) {
+  box-shadow: none;
+  top: 4px;
+}
+
+.btn-complete:disabled {
+  background: #95A5A6;
+  border-color: #7F8C8D;
+  box-shadow: 0 4px 0 #5D6D7E;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Creator Actions */
+.creator-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-edit {
+  flex: 1;
+  background: #F39C12;
+  color: white;
+  border: 3px solid #E67E22;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 4px 0 #D35400;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-edit:hover {
+  background: #E67E22;
+  top: 2px;
+  box-shadow: 0 2px 0 #D35400;
+}
+
+.btn-edit:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+.btn-delete {
+  flex: 1;
+  background: #E74C3C;
+  color: white;
+  border: 3px solid #C0392B;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 4px 0 #A93226;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-delete:hover {
+  background: #C0392B;
+  top: 2px;
+  box-shadow: 0 2px 0 #A93226;
+}
+
+.btn-delete:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Completed Challenges */
+.completed-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.completed-card {
+  background: #D5F4E6;
+  border: 4px solid #52BE80;
+  box-shadow: 0 6px 0 #27AE60;
+  padding: 1.5rem;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.completed-card:hover {
+  top: 3px;
+  box-shadow: 0 3px 0 #27AE60;
+}
+
+.completed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.completed-header h3 {
+  color: #1E8449;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  flex: 1;
+}
+
+.completed-badge {
+  background: #27AE60;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: 3px solid #1E8449;
+  box-shadow: 0 3px 0 #186A3B;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 0 #186A3B;
+  white-space: nowrap;
+}
+
+.completed-info {
+  margin-bottom: 1rem;
+}
+
+.completed-info p {
+  color: #1E8449;
+  font-weight: bold;
+  margin: 0.3rem 0;
+}
+
+.completed-points {
+  color: #E67E22 !important;
+}
+
+.completed-date {
+  font-size: 0.9rem;
+  color: #52BE80 !important;
+}
+
+.btn-view-details {
+  background: #9B59B6;
+  color: white;
+  border: 3px solid #8E44AD;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 4px 0 #7D3C98;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-view-details:hover {
+  background: #8E44AD;
+  top: 2px;
+  box-shadow: 0 2px 0 #7D3C98;
+}
+
+.btn-view-details:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Create Challenge Form */
+.create-challenge-form {
+  background: #ECF0F1;
+  border: 4px solid #BDC3C7;
+  box-shadow: 0 6px 0 #95A5A6;
+  padding: 2rem;
+}
+
+.create-challenge-form h2 {
+  color: #2C3E50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 3px solid #BDC3C7;
+  background: white;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #2C3E50;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498DB;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.create-challenge-form .btn-primary {
+  background: #2ECC71;
+  color: white;
+  border: 3px solid #27AE60;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 0 #1e8449;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.create-challenge-form .btn-primary:hover {
+  background: #27AE60;
+  top: 2px;
+  box-shadow: 0 2px 0 #1e8449;
+}
+
+.create-challenge-form .btn-primary:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Back Link */
+.back-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-secondary {
+  background: #34495E;
+  color: white;
+  border: 3px solid #2C3E50;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 0 #1a252f;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.btn-secondary:hover {
+  background: #2C3E50;
+  top: 2px;
+  box-shadow: 0 2px 0 #1a252f;
+}
+
+.btn-secondary:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #F4E4C1;
+  border: 4px solid #8B6F47;
+  box-shadow: 0 8px 0 #6B5736;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-modal,
+.close-details-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #E74C3C;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 2px 2px 0 #C0392B;
+  transition: all 0.1s ease;
+}
+
+.close-modal:hover,
+.close-details-modal:hover {
+  color: #C0392B;
+}
+
+.modal-content h2 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+}
+
+.modal-content p {
+  margin-bottom: 0.5rem;
+  color: #34495E;
+  font-weight: bold;
+}
+
+.modal-content form {
+  margin-top: 1rem;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+  font-weight: bold;
+}
+
+.modal-content textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.8rem;
+  border: 3px solid #8B6F47;
+  background: white;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #2ECC71;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3);
+}
+
+.modal-content .btn-primary {
+  background: #2ECC71;
+  color: white;
+  border: 3px solid #27AE60;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 0 #1e8449;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  width: 100%;
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
+
+.modal-content .btn-primary:hover {
+  background: #27AE60;
+  top: 2px;
+  box-shadow: 0 2px 0 #1e8449;
+}
+
+.modal-content .btn-primary:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+/* Details Modal Content */
+.details-text {
+  background: white;
+  border: 3px solid #BDC3C7;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.details-text h3 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.details-text p {
+  color: #34495E;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #5D4E37;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .challenges-container {
+    padding: 1rem;
+  }
+  
+  .challenges-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .challenge-tabs {
+    flex-direction: column;
+  }
+  
+  .tab-btn {
+    width: 100%;
+  }
+  
+  .completed-header {
+    flex-direction: column;
+  }
+  
+  .completed-badge {
+    align-self: flex-start;
+  }
+  
+  .btn-complete,
+  .btn-view-details {
+    width: 100%;
+  }
+}
